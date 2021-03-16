@@ -21,6 +21,9 @@
     "@types/mocha": "^8.2.1",
     "@types/node": "^14.14.35",
     "chai": "^4.3.4",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "ethereum-waffle": "^3.3.0",
     "ethers": "^5.0.32",
     "husky": "^4.3.8",
@@ -35,6 +38,7 @@
     }
   },
   "lint-staged": {
-    "*.{tx,js,css,md}": "prettier --write"
+    "*.ts": "eslint --fix",
+    "*.{ts,md}": "prettier --write"
   }
 }
