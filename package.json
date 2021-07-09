@@ -11,7 +11,8 @@
     "clean": "npx hardhat clean",
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
-    "format": "npx prettier . --write"
+    "format": "npx prettier . --write",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -30,7 +31,7 @@
     "ethereum-waffle": "^3.0.0",
     "ethers": "^5.0.32",
     "hardhat": "^2.4.3",
-    "husky": "^7.0.1",
+    "husky": "^7.0.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.2.1",
     "prettier-plugin-solidity": "^1.0.0-beta.6",
