@@ -7,12 +7,16 @@
     "test": "test"
   },
   "scripts": {
+    "prepare": "husky install",
     "build": "npm run clean && npm run compile",
     "clean": "npx hardhat clean",
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
-    "format": "npx prettier . --write",
-    "prepare": "husky install"
+    "lint": "npx eslint \"**/*.{js,ts}\" --quiet --fix",
+    "solhint": "solhint \"contracts/**/*.sol\"",
+    "format": "npx prettier -w \"contracts/**/*.sol\"",
+    "solformat": "npx prettier -w \"**/*.{ts, js, yml, json}\"",
+    "fix": "yarn lint & yarn solhint & yarn solformat & yarn format"
   },
   "author": "",
   "license": "ISC",
@@ -23,31 +27,20 @@
     "@types/mocha": "^8.2.1",
     "@types/node": "^14.14.35",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.28.2",
     "chai": "^4.3.4",
     "eslint": "^7.22.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-import": "^2.23.4",
     "ethereum-waffle": "^3.0.0",
     "ethers": "^5.0.32",
     "hardhat": "^2.4.3",
     "husky": "^7.0.0",
-    "lint-staged": "^11.0.0",
     "prettier": "^2.2.1",
-    "prettier-plugin-solidity": "^1.0.0-beta.6",
+    "prettier-plugin-solidity": "^1.0.0-beta.14",
+    "solhint": "^3.3.6",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.ts": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ]
   }
 }

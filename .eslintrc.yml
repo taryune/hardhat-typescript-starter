@@ -16,8 +16,6 @@ plugins:
   - '@typescript-eslint'
 rules:
   {
-    'no-use-before-define': 'off',
-    'import/no-unresolved': 'off',
-    'react/jsx-filename-extension':
-      [1, { 'extensions': ['.tsx', '.ts', '.json', 'yml'] }],
+    'import/extentions': 'off',
+    'import/no-extraneous-dependencies': ['error', { 'devDependencies': true }],
   }
