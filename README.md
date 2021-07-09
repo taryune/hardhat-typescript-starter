@@ -3,26 +3,25 @@ Uses
 - [Hardhat](https://github.com/nomiclabs/hardhat)
 - [Ethers](https://github.com/ethers-io/ethers.js/)
 - [Waffle](https://github.com/EthWorks/Waffle)
-- [lint-staged](https://github.com/okonet/lint-staged)
 
 ## Usage
 ### Install dependencies
 ```
-npm i
+yarn
 ```
 
 ### Build
 ```
-npm run build
+yarn build
 ```
 
 ### Test
 ```
-npm run test
+yarn test
 ```
 
 
-### Prettier
+### Lint & Prettier
 ```
-npm run format
+yarn fix
 ```
