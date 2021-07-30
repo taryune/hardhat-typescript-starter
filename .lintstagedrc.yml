@@ -1,4 +1,4 @@
-'*.{ts, js, yml, json}':
+'*.{ts,js,yml,json}':
   - yarn fix-ts
-'*.{sol}':
+'./contracts/*.sol':
   - yarn fix-sol
