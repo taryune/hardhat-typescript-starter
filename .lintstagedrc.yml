@@ -1,4 +1,2 @@
-'*.{ts, js, yml, json}':
-  - yarn fix-ts
-'*.{sol}':
-  - yarn fix-sol
+'*':
+  - yarn fix
